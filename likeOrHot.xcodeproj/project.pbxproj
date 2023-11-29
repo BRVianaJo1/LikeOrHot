@@ -14,6 +14,9 @@
 		CF120CE32B16AFB300EC94F0 /* likeOrHotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF120CE22B16AFB300EC94F0 /* likeOrHotTests.swift */; };
 		CF120CED2B16AFB300EC94F0 /* likeOrHotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF120CEC2B16AFB300EC94F0 /* likeOrHotUITests.swift */; };
 		CF120CEF2B16AFB300EC94F0 /* likeOrHotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF120CEE2B16AFB300EC94F0 /* likeOrHotUITestsLaunchTests.swift */; };
+		CF120CFF2B16B39400EC94F0 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF120CFE2B16B39400EC94F0 /* VideoModel.swift */; };
+		CF120D012B16C9E800EC94F0 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF120D002B16C9E800EC94F0 /* VideoViewModel.swift */; };
+		CF120D032B16CEF700EC94F0 /* datalikeOrHot.json in Resources */ = {isa = PBXBuildFile; fileRef = CF120D022B16CEF700EC94F0 /* datalikeOrHot.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		CF120CE82B16AFB300EC94F0 /* likeOrHotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = likeOrHotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF120CEC2B16AFB300EC94F0 /* likeOrHotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likeOrHotUITests.swift; sourceTree = "<group>"; };
 		CF120CEE2B16AFB300EC94F0 /* likeOrHotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likeOrHotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF120CFE2B16B39400EC94F0 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		CF120D002B16C9E800EC94F0 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		CF120D022B16CEF700EC94F0 /* datalikeOrHot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = datalikeOrHot.json; path = ../../datalikeOrHot.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +100,13 @@
 		CF120CD02B16AFAF00EC94F0 /* likeOrHot */ = {
 			isa = PBXGroup;
 			children = (
+				CF120CFD2B16B2BC00EC94F0 /* View */,
+				CF120CFC2B16B2A700EC94F0 /* ViewModel */,
+				CF120CFB2B16B08D00EC94F0 /* Model */,
 				CF120CD12B16AFAF00EC94F0 /* likeOrHotApp.swift */,
 				CF120CD32B16AFAF00EC94F0 /* ContentView.swift */,
 				CF120CD52B16AFB200EC94F0 /* Assets.xcassets */,
+				CF120D022B16CEF700EC94F0 /* datalikeOrHot.json */,
 				CF120CD72B16AFB200EC94F0 /* Preview Content */,
 			);
 			path = likeOrHot;
@@ -125,6 +135,29 @@
 				CF120CEE2B16AFB300EC94F0 /* likeOrHotUITestsLaunchTests.swift */,
 			);
 			path = likeOrHotUITests;
+			sourceTree = "<group>";
+		};
+		CF120CFB2B16B08D00EC94F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF120CFE2B16B39400EC94F0 /* VideoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF120CFC2B16B2A700EC94F0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF120D002B16C9E800EC94F0 /* VideoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CF120CFD2B16B2BC00EC94F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +266,7 @@
 			files = (
 				CF120CD92B16AFB200EC94F0 /* Preview Assets.xcassets in Resources */,
 				CF120CD62B16AFB200EC94F0 /* Assets.xcassets in Resources */,
+				CF120D032B16CEF700EC94F0 /* datalikeOrHot.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +293,8 @@
 			files = (
 				CF120CD42B16AFAF00EC94F0 /* ContentView.swift in Sources */,
 				CF120CD22B16AFAF00EC94F0 /* likeOrHotApp.swift in Sources */,
+				CF120D012B16C9E800EC94F0 /* VideoViewModel.swift in Sources */,
+				CF120CFF2B16B39400EC94F0 /* VideoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,11 +455,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"likeOrHot/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,11 +485,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"likeOrHot/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
